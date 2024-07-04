@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+<div>
+{% block conteudo %}
+<br>
+      <h2 style="text-align: center;">Resultados</h2>
+
+      <hr>
+<table class="table table-success table-striped">
+  <thead class='table-dark'>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for contacto in resultados %}
+    <tr>
+        <td>{{contacto.id}}</td>
+        <td>{{contacto.nome}}</td>
+        <td>{{contacto.telefone}}</td>
+        <td>
+          <a class="btn btn-success btn-sm" href="{{contacto.id}}/atualiza_contactos">Editar</a>
+          <a class="btn btn-danger btn-sm" onclick='return confirm("Você tem certeza que deseja excluir esse contacto?")' href="{{contacto.id}}/delete_contactos">Excluir</a>
+        </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% endblock conteudo %}
+</div>

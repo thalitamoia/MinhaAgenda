@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<div>
+{% block conteudo %}
+<br>
+      <h2 style="text-align: center;">Criar novo contacto</h2>
+
+      <hr>
+
+{%- for mensagem in get_flashed_messages() %}
+    <div class='alert alert-danger'>
+        {{mensagem}}
+    </div>
+{%- endfor %}
+<form action="{{url_for('cria_contacto')}}" method="POST" class="form-control">
+    <label>Nome</label>
+    <input class="form-control" type="text" name="nome" placeholder="nome" >
+    <label>Numero de contacto</label>
+    <input class="form-control" type="numbers" name="contacto" placeholder="Numero de contacto" >
+    <br>
+    <button class="btn btn-success">Salvar</button>
+   
+</form>
+
+
+
+
+{% endblock conteudo %}

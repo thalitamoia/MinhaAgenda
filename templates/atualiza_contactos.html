@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<div>
+{% block conteudo %}
+<br>
+      <h2 style="text-align: center;">Editar contacto</h2>
+
+      <hr>
+
+{%- for mensagem in get_flashed_messages() %}
+    <div class='alert alert-danger'>
+        {{mensagem}}
+    </div>
+{%- endfor %}
+<form action="{{url_for('atualiza_contactos', id=agenda.id)}}" method="POST" class="form-control">
+    <label>Nome</label>
+    <input class="form-control" type="text" name="nome" value={{agenda.nome}}>
+    <label>Numero de contacto</label>
+    <input class="form-control" type="numbers" name="contacto" value={{agenda.telefone}}>
+    <br>
+    <button class="btn btn-success">Atualizar</button>
+   
+</form>
+
+
+
+
+{% endblock conteudo %}

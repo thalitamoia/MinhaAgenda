@@ -67,8 +67,8 @@ Desenvolvedor - ThalitaMoia- thanalistati@outlook.com
 ![Adicionar Contato](static/img/img3.png)
 
 ### Atualizar Contato
-![Atualizar Contato](static/img/img1.png)
+![Atualizar Contato](static/img/img2.png)
 ### Deletar Contato
-![Deletar Contato](static/img/img2.png)
+![Deletar Contato](static/img/img1.png)
 
 Link do Projeto: https://github.com/thalitamoia/MinhaAgenda
